@@ -6,14 +6,30 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint": "eslint --ext .js --ext .vue .",
+    "eslint:fix": "eslint --ext .vue --ext .js . --fix",
+    "stylelint": "stylelint \"**/*.{scss,vue}\"",
+    "stylelint:fix": "stylelint \"**/*.{scss,vue}\" --fix",
+    "all:fix": "npm run eslint:fix && npm run stylelint:fix"
   },
   "dependencies": {
+    "@vue/compat": "^3.3.4",
+    "stylelint-scss": "^5.3.1",
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "postcss-html": "^1.5.0",
     "sass": "^1.63.6",
-    "vite": "^4.3.9"
+    "stylelint": "^15.11.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-standard-scss": "^11.1.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-order": "^6.0.3",
+    "vite": "^4.3.9",
+    "vite-plugin-stylelint": "^5.1.1"
   }
 }
