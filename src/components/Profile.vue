@@ -1,23 +1,23 @@
 
 <script setup>
-import { computed, useCssModule } from 'vue';
+    import { computed, useCssModule } from 'vue';
 
-const props = defineProps({
-    color: {
-        type: String,
-        default: '',
-    },
-})
+    const props = defineProps({
+        color: {
+            type: String,
+            default: '',
+        },
+    })
 
-const $style = useCssModule();
+    const $style = useCssModule();
 
-$style.color = props.color;
+    $style.color = props.color;
 
-const classList = computed(() => {
-    return [
-        $style[`_${props.color}`],
-    ]
-})
+    const classList = computed(() => {
+        return [
+            $style[`_${props.color}`],
+        ]
+    })
 </script>
 
 <template>
