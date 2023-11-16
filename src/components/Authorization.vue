@@ -9,7 +9,7 @@
         </h1>
 
         <button @click="$emit('click')">
-            ДА
+            Войти
         </button>
     </section>
 </template>
