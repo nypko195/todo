@@ -1,6 +1,7 @@
 
 <script setup>
     import { computed, useCssModule } from 'vue';
+    import { user } from '@/assets/user';
 
     const props = defineProps({
         color: {
@@ -25,17 +26,17 @@
         <div :class="$style.image">
         </div>
 
-        <span :class="$style.name">Aлексей</span>
+        <span :class="$style.name">{{ user.name }}</span>
     </section>
 </template>
 
 <style lang="scss" module>
     .Profile {
         display: flex;
+        flex-direction: column;
         align-items: center;
         padding: 24px 0;
         border-radius: 24px;
-        flex-direction: column;
         box-shadow: 0 0 10px 0 rgb(0 0 0 / 90%);
     }
 

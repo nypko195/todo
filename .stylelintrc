@@ -92,6 +92,7 @@
             "overflow-x",
             "overflow-y",
             "display",
+            "flex-direction",
             "align-items",
             "justify-content",
             "align-content",
